@@ -1,0 +1,30 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build output
+out/
+dist/
+
+# VSCode settings
+.vscode/
+
+# Test coverage and logs
+coverage/
+*.log
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+*.swp
+
+# VSCE package files
+*.vsix
+
+# Optional: TypeScript build cache
+*.tsbuildinfo
+
+# Local environment files (if any)
+.env
+.env.*

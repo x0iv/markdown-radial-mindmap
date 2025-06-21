@@ -1,0 +1,102 @@
+{
+  "name": "markdown-radial-mindmap",
+  "displayName": "Markdown Radial MindMap",
+  "description": "Visualize Markdown lists as interactive radial mind maps inside VSCode.",
+  "version": "0.4.0",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "icon": "icon.png",
+  "keywords": [
+    "markdown",
+    "mindmap",
+    "visualization",
+    "radial",
+    "diagram",
+    "note-taking"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdown-radial-mindmap.viewMindMap",
+        "title": "Markdown Radial MindMap: View Mind Map"
+      }
+    ],
+    "configuration": {
+      "title": "Markdown Radial MindMap",
+      "properties": {
+        "markdownRadialMindMap.nodeColor": {
+          "type": "string",
+          "default": "#ffffff",
+          "description": "Node background color."
+        },
+        "markdownRadialMindMap.rootNodeColor": {
+          "type": "string",
+          "default": "#b7eeb7",
+          "description": "Root node background color."
+        },
+        "markdownRadialMindMap.linkColor": {
+          "type": "string",
+          "default": "#333333",
+          "description": "Color of the links between nodes."
+        },
+        "markdownRadialMindMap.nodeStrokeColor": {
+          "type": "string",
+          "default": "#000000",
+          "description": "Node border color."
+        },
+        "markdownRadialMindMap.fontFamily": {
+          "type": "string",
+          "default": "Courier New, Courier, monospace",
+          "description": "Font family for node labels."
+        },
+        "markdownRadialMindMap.rootFontSize": {
+          "type": "number",
+          "default": 20,
+          "description": "Root node font size in pixels."
+        },
+        "markdownRadialMindMap.fontSizeDelta": {
+          "type": "number",
+          "default": 4,
+          "description": "Font size decrement per level (in pixels)."
+        },
+        "markdownRadialMindMap.nodePaddingX": {
+          "type": "number",
+          "default": 30,
+          "description": "Horizontal node padding."
+        },
+        "markdownRadialMindMap.nodePaddingY": {
+          "type": "number",
+          "default": 20,
+          "description": "Vertical node padding."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "postcompile": "shx cp ./src/*.js ./out/",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.88.0",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "shx": "^0.3.4",
+    "typescript": "^5.3.3"
+  }
+}
