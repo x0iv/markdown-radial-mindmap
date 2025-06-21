@@ -2,6 +2,7 @@
   "name": "markdown-radial-mindmap",
   "displayName": "Markdown Radial MindMap",
   "description": "Visualize Markdown lists as interactive radial mind maps inside VSCode.",
+  "publisher": "x0iv",
   "version": "0.4.0",
   "engines": {
     "vscode": "^1.88.0"
@@ -12,6 +13,14 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "icon": "icon.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/x0iv/markdown-radial-mindmap"
+  },
+  "bugs": {
+    "url": "https://github.com/x0iv/markdown-radial-mindmap/issues"
+  },
   "keywords": [
     "markdown",
     "mindmap",
